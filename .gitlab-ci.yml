@@ -1,0 +1,11 @@
+stages:
+  - build
+
+sonar_scan:
+  image: elct9620/gitlab-sonar-scanner
+  stage: build
+  tags:
+    - sonar
+  script:
+    - echo "scan"
+  allow_failure: true
